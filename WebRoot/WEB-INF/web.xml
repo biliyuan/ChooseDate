@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>xidian.qlj.serlvet.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>party</display-name>
+    <servlet-name>party</servlet-name>
+    <servlet-class>xidian.qlj.serlvet.Party</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>party</servlet-name>
+    <url-pattern>/Party</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>choosedate</display-name>
+    <servlet-name>choosedate</servlet-name>
+    <servlet-class>xidian.qlj.serlvet.choosedate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>choosedate</servlet-name>
+    <url-pattern>/choosedate</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>party2</display-name>
+    <servlet-name>party2</servlet-name>
+    <servlet-class>xidian.qlj.serlvet.Party2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>party2</servlet-name>
+    <url-pattern>/Party2</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>regist</display-name>
+    <servlet-name>regist</servlet-name>
+    <servlet-class>xidian.qlj.serlvet.Regist</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>regist</servlet-name>
+    <url-pattern>/Regist</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>gooddate</display-name>
+    <servlet-name>gooddate</servlet-name>
+    <servlet-class>xidian.qlj.serlvet.gooddate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>gooddate</servlet-name>
+    <url-pattern>/gooddate</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>encodeFilter</filter-name>
+    <filter-class>xidian.qlj.tools.myfilter</filter-class>
+    <init-param>
+        <param-name>encode</param-name>
+        <param-value>GBK</param-value>
+    </init-param>
+    <init-param>
+        <param-name>ignore</param-name>
+        <param-value>false</param-value>
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>encodeFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+</web-app>
